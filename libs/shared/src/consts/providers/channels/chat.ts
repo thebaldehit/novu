@@ -1,11 +1,19 @@
 import { IConfigCredentials, IProviderConfig } from '../provider.interface';
-import { grafanaOnCallConfig, slackConfig, getstreamConfig, rocketChatConfig } from '../credentials';
+import { grafanaOnCallConfig, slackConfig, getstreamConfig, rocketChatConfig, telegramConfig } from '../credentials';
 
 import { ChatProviderIdEnum } from '../provider.enum';
 
 import { ChannelTypeEnum } from '../../../types';
 
 export const chatProviders: IProviderConfig[] = [
+  {
+    id: ChatProviderIdEnum.Telegram,
+    displayName: 'Telegram',
+    channel: ChannelTypeEnum.CHAT,
+    credentials: telegramConfig,
+    docReference: 'https://www.npmjs.com/package/telegraf',
+    logoFileName: { light: 'telegram.png', dark: 'telegram.png' },
+  },
   {
     id: ChatProviderIdEnum.Slack,
     displayName: 'Slack',

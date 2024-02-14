@@ -1063,3 +1063,12 @@ export const rocketChatConfig: IConfigCredentials[] = [
     required: true,
   },
 ];
+
+export const telegramConfig: IConfigCredentials[] = [
+  {
+    key: CredentialsKeyEnum.ApiKey,
+    displayName: 'API Key',
+    type: 'string',
+    required: true,
+  },
+];

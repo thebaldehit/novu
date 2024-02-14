@@ -9,6 +9,7 @@ import { RyverHandler } from './handlers/ryver.handler';
 import { ZulipHandler } from './handlers/zulip.handler';
 import { GetstreamChatHandler } from './handlers/getstream.handler';
 import { RocketChatHandler } from './handlers/rocket-chat.handler';
+import { TelegramHandler } from './handlers/telegram.handler';
 
 export class ChatFactory implements IChatFactory {
   handlers: IChatHandler[] = [
@@ -21,6 +22,7 @@ export class ChatFactory implements IChatFactory {
     new GrafanaOnCallHandler(),
     new GetstreamChatHandler(),
     new RocketChatHandler(),
+    new TelegramHandler(),
   ];
 
   getHandler(integration: IntegrationEntity) {
